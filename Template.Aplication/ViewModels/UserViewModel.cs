@@ -1,11 +1,10 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
-using Template.Domain.Models;
 
-namespace Template.Domain.Entities
+namespace Template.Aplication.ViewModels
 {
-    public class User : Entity
+    public class UserViewModel
     {
         public Guid Id { get; set; }
         public string Name { get; set; }
