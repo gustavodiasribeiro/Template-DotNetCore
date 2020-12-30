@@ -30,5 +30,19 @@ namespace Template.Aplication.Services
 
             return _usersViewModel;
         }
+
+        public bool Post(UserViewModel userViewModel)
+        {
+            User _user = new User
+            {
+                Id = new Guid(),
+                Name = userViewModel.Name,
+                Email = userViewModel.Email
+            };
+
+            this.userRepository.Create(_user);
+
+            return true;
+        }
     }
 }
