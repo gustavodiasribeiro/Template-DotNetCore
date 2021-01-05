@@ -25,7 +25,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "4.2-CrossCutting", "4.2-Cro
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.Data", "Template.Data\Template.Data.csproj", "{84D99C38-A87D-4135-8293-021DEBE593B5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.IoC", "Template.IoC\Template.IoC.csproj", "{308E7915-349B-4A1E-9129-CD7C31473F8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Template.IoC", "Template.IoC\Template.IoC.csproj", "{308E7915-349B-4A1E-9129-CD7C31473F8C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Template.Swagger", "Template.Swagger\Template.Swagger.csproj", "{856E04CA-DFC1-49C8-A5D7-4C41BC39FF00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -53,6 +55,10 @@ Global
 		{308E7915-349B-4A1E-9129-CD7C31473F8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{308E7915-349B-4A1E-9129-CD7C31473F8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{308E7915-349B-4A1E-9129-CD7C31473F8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{856E04CA-DFC1-49C8-A5D7-4C41BC39FF00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{856E04CA-DFC1-49C8-A5D7-4C41BC39FF00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{856E04CA-DFC1-49C8-A5D7-4C41BC39FF00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{856E04CA-DFC1-49C8-A5D7-4C41BC39FF00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -66,6 +72,7 @@ Global
 		{DD4FB63F-A6BC-4E6F-8F74-8DE56B1315DC} = {81FEE3A6-F676-4B8B-8026-C3158EB3CB39}
 		{84D99C38-A87D-4135-8293-021DEBE593B5} = {14FC05D5-3CC8-4505-8AC0-4DF75E544C11}
 		{308E7915-349B-4A1E-9129-CD7C31473F8C} = {DD4FB63F-A6BC-4E6F-8F74-8DE56B1315DC}
+		{856E04CA-DFC1-49C8-A5D7-4C41BC39FF00} = {DD4FB63F-A6BC-4E6F-8F74-8DE56B1315DC}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {051CDA33-05F1-4EDB-A22F-8B333A72DB8E}
