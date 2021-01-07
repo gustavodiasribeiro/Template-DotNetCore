@@ -10,5 +10,11 @@ namespace Template.Aplication.Interfaces
         List<UserViewModel> Get();
 
         bool Post(UserViewModel userViewModel);
+
+        UserViewModel GetUserById(string id);
+
+        bool Put(UserViewModel userViewModel);
+
+        bool Delete(string id);
     }
 }

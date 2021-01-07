@@ -28,30 +28,56 @@ namespace Template.Aplication.Services
 
             _usersViewModel = mapper.Map<List<UserViewModel>>(_users);
 
-            //_users.ToList().ForEach(x => _usersViewModel.Add(new UserViewModel() 
-            //{ 
-            //    Id = x.Id,
-            //    Name = x.Name,
-            //    Email = x.Email
-            //}));
-
             return _usersViewModel;
         }
 
         public bool Post(UserViewModel userViewModel)
         {
-            //User _user = new User
-            //{
-            //    Id = new Guid(),
-            //    Name = userViewModel.Name,
-            //    Email = userViewModel.Email
-            //};
-
             User _user = mapper.Map<User>(userViewModel);
 
             this.userRepository.Create(_user);
 
             return true;
+        }
+
+        public UserViewModel GetUserById(string id)
+        {
+            if (!Guid.TryParse(id, out Guid userID))
+                throw new Exception("UserId is not Valid!!");
+
+            User _user = this.userRepository.Find(x => x.Id == userID && !x.IsDeleted);
+
+            if (_user == null)
+                throw new Exception("User is not found!!!");
+
+            return mapper.Map<UserViewModel>(_user);
+        }
+
+        public bool Put(UserViewModel userViewModel)
+        {
+            User _user = this.userRepository.Find(x => x.Id == userViewModel.Id && !x.IsDeleted);
+
+            if (_user == null)
+                throw new Exception("User is not found!!!");
+
+            _user = mapper.Map<User>(userViewModel);
+
+            this.userRepository.Update(_user);
+
+            return true;
+        }
+
+        public bool Delete(string id)
+        {
+            if (!Guid.TryParse(id, out Guid userID))
+                throw new Exception("UserId is not Valid!!");
+
+            User _user = this.userRepository.Find(x => x.Id == userID && !x.IsDeleted);
+
+            if (_user == null)
+                throw new Exception("User is not found!!!");
+
+            return this.userRepository.Delete(_user);
         }
     }
 }

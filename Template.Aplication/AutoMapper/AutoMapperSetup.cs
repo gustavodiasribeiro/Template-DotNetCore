@@ -14,6 +14,7 @@ namespace Template.Aplication.AutoMapper
             #region ViewModelToDomain
             CreateMap<UserViewModel, User>();
             #endregion
+
             #region DomainToViewModel
             CreateMap<User, UserViewModel>();
             #endregion
